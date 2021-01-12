@@ -47,7 +47,7 @@ public class SecondProjectJava {
         }
         System.out.println("\n");
         /**
-         * ******************************************************************
+         * **********************Masyvo elementu perstatymas********************
          */
         System.out.println("********************************************");
         int[] m = {1, 2, 3, 4, 5};
@@ -74,6 +74,29 @@ public class SecondProjectJava {
             System.out.println("");
         }
         System.out.println("********************************************");
+        int[] m1 = {5, 4, 3, 2, 1};
+        int[][] rez1 = new int[m1.length][m1.length];
+        int[] tmp1 = new int[m1.length];
+        for (int k = 0; k < m1.length; k++) {
+            for (int j = 0; j < m1.length; j++) {
+                rez1[k][j] = m1[j];
+            }
+            //*******************************************
+            tmp1[0] = m1[m1.length - 1]; // 1 
+            for (int i = 0; i < m1.length-1; i++) {
+                tmp1[i+1] = m1[i];
+            }
+            for (int i = 0; i < m1.length; i++) {
+                m1[i] = tmp1[i];
+            }
+        }
+        //****************************************
+        for (int a = 0; a < m1.length; a++) {
+            for (int b = 0; b < m1.length; b++) {
+                System.out.print(rez1[a][b] + " ");
+            }
+            System.out.println("");
+        }
     }
 
 }
